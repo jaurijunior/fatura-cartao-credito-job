@@ -32,6 +32,14 @@ public class FaturaCartaoCredito {
 	public void setTransacaos(List<Transacao> transacaos) {
 		this.transacaos = transacaos;
 	}
+	
+
+	public Double getTotal() {
+		return transacaos
+				.stream()
+				.mapToDouble(Transacao::getValor)
+				.reduce(0.0, Double::sum);
+	}
 
 	@Override
 	public String toString() {

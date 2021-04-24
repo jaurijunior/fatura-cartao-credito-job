@@ -43,9 +43,9 @@ public class FaturaCartaoCreditoReader implements ItemStreamReader<FaturaCartaoC
 	public FaturaCartaoCredito read()
 			throws Exception, UnexpectedInputException, ParseException, NonTransientResourceException {
 
-		if (transacaoAtual == null) {
+		if (transacaoAtual == null) 
 			transacaoAtual = delegate.read();
-		}
+		
 		
 		FaturaCartaoCredito faturaCartaoCredito = null;
 		Transacao transacao = transacaoAtual;
